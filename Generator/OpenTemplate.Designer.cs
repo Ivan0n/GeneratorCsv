@@ -28,131 +28,169 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.MetadataPathBox = new System.Windows.Forms.TextBox();
-            this.TemplatePathBox = new System.Windows.Forms.TextBox();
-            this.ButtonOk = new System.Windows.Forms.Button();
-            this.ButtonCancel = new System.Windows.Forms.Button();
-            this.TemplateBrowseButton = new System.Windows.Forms.Button();
-            this.OpenDialog = new System.Windows.Forms.OpenFileDialog();
-            this.MetadataBrowseButton = new System.Windows.Forms.Button();
-            this.MetadataGroupBox = new System.Windows.Forms.GroupBox();
-            this.TemplateGroupBox = new System.Windows.Forms.GroupBox();
-            this.MetadataGroupBox.SuspendLayout();
-            this.TemplateGroupBox.SuspendLayout();
-            this.SuspendLayout();
+            MetadataPathBox = new TextBox();
+            TemplatePathBox = new TextBox();
+            ButtonOk = new Button();
+            ButtonCancel = new Button();
+            TemplateBrowseButton = new Button();
+            OpenDialog = new OpenFileDialog();
+            MetadataBrowseButton = new Button();
+            MetadataGroupBox = new GroupBox();
+            TemplateGroupBox = new GroupBox();
+            CsvGroupBox = new GroupBox();
+            button1 = new Button();
+            CsvPathBox = new TextBox();
+            MetadataGroupBox.SuspendLayout();
+            TemplateGroupBox.SuspendLayout();
+            CsvGroupBox.SuspendLayout();
+            SuspendLayout();
             // 
             // MetadataPathBox
             // 
-            this.MetadataPathBox.Location = new System.Drawing.Point(6, 22);
-            this.MetadataPathBox.Name = "MetadataPathBox";
-            this.MetadataPathBox.Size = new System.Drawing.Size(320, 23);
-            this.MetadataPathBox.TabIndex = 0;
-            this.MetadataPathBox.TextChanged += new System.EventHandler(this.TextBox_TextChanged);
+            MetadataPathBox.Location = new Point(6, 21);
+            MetadataPathBox.Name = "MetadataPathBox";
+            MetadataPathBox.Size = new Size(320, 23);
+            MetadataPathBox.TabIndex = 0;
+            MetadataPathBox.TextChanged += TextBox_TextChanged;
             // 
             // TemplatePathBox
             // 
-            this.TemplatePathBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.TemplatePathBox.Location = new System.Drawing.Point(6, 22);
-            this.TemplatePathBox.Name = "TemplatePathBox";
-            this.TemplatePathBox.Size = new System.Drawing.Size(320, 23);
-            this.TemplatePathBox.TabIndex = 2;
-            this.TemplatePathBox.TextChanged += new System.EventHandler(this.TextBox_TextChanged);
+            TemplatePathBox.Anchor = AnchorStyles.None;
+            TemplatePathBox.Location = new Point(9, 22);
+            TemplatePathBox.Name = "TemplatePathBox";
+            TemplatePathBox.Size = new Size(320, 23);
+            TemplatePathBox.TabIndex = 2;
+            TemplatePathBox.TextChanged += TextBox_TextChanged;
             // 
             // ButtonOk
             // 
-            this.ButtonOk.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.ButtonOk.DialogResult = System.Windows.Forms.DialogResult.OK;
-            this.ButtonOk.Enabled = false;
-            this.ButtonOk.Location = new System.Drawing.Point(140, 140);
-            this.ButtonOk.Name = "ButtonOk";
-            this.ButtonOk.Size = new System.Drawing.Size(75, 23);
-            this.ButtonOk.TabIndex = 4;
-            this.ButtonOk.Text = "OK";
-            this.ButtonOk.UseVisualStyleBackColor = true;
-            this.ButtonOk.Click += new System.EventHandler(this.ButtonOk_Click);
+            ButtonOk.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
+            ButtonOk.DialogResult = DialogResult.OK;
+            ButtonOk.Enabled = false;
+            ButtonOk.Location = new Point(140, 203);
+            ButtonOk.Name = "ButtonOk";
+            ButtonOk.Size = new Size(75, 23);
+            ButtonOk.TabIndex = 4;
+            ButtonOk.Text = "OK";
+            ButtonOk.UseVisualStyleBackColor = true;
+            ButtonOk.Click += ButtonOk_Click;
             // 
             // ButtonCancel
             // 
-            this.ButtonCancel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.ButtonCancel.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.ButtonCancel.Location = new System.Drawing.Point(221, 140);
-            this.ButtonCancel.Name = "ButtonCancel";
-            this.ButtonCancel.Size = new System.Drawing.Size(75, 23);
-            this.ButtonCancel.TabIndex = 5;
-            this.ButtonCancel.Text = "Cancel";
-            this.ButtonCancel.UseVisualStyleBackColor = true;
-            this.ButtonCancel.Click += new System.EventHandler(this.ButtonCancel_Click);
+            ButtonCancel.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
+            ButtonCancel.DialogResult = DialogResult.Cancel;
+            ButtonCancel.Location = new Point(224, 203);
+            ButtonCancel.Name = "ButtonCancel";
+            ButtonCancel.Size = new Size(75, 23);
+            ButtonCancel.TabIndex = 5;
+            ButtonCancel.Text = "Cancel";
+            ButtonCancel.UseVisualStyleBackColor = true;
+            ButtonCancel.Click += ButtonCancel_Click;
             // 
             // TemplateBrowseButton
             // 
-            this.TemplateBrowseButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.TemplateBrowseButton.Location = new System.Drawing.Point(332, 21);
-            this.TemplateBrowseButton.Name = "TemplateBrowseButton";
-            this.TemplateBrowseButton.Size = new System.Drawing.Size(75, 23);
-            this.TemplateBrowseButton.TabIndex = 3;
-            this.TemplateBrowseButton.Text = "Browse";
-            this.TemplateBrowseButton.UseVisualStyleBackColor = true;
-            this.TemplateBrowseButton.Click += new System.EventHandler(this.TemplateBrowseButton_Click);
+            TemplateBrowseButton.Anchor = AnchorStyles.None;
+            TemplateBrowseButton.Location = new Point(332, 21);
+            TemplateBrowseButton.Name = "TemplateBrowseButton";
+            TemplateBrowseButton.Size = new Size(75, 23);
+            TemplateBrowseButton.TabIndex = 3;
+            TemplateBrowseButton.Text = "Browse";
+            TemplateBrowseButton.UseVisualStyleBackColor = true;
+            TemplateBrowseButton.Click += TemplateBrowseButton_Click;
             // 
             // OpenDialog
             // 
-            this.OpenDialog.DefaultExt = "json";
-            this.OpenDialog.FileName = "openFileDialog";
-            this.OpenDialog.Filter = "Metadata files (*.json)|*.json|All files (*.*)|*.*";
+            OpenDialog.DefaultExt = "json";
+            OpenDialog.FileName = "openFileDialog";
+            OpenDialog.Filter = "Metadata files (*.json)|*.json|All files (*.*)|*.*";
             // 
             // MetadataBrowseButton
             // 
-            this.MetadataBrowseButton.Location = new System.Drawing.Point(332, 21);
-            this.MetadataBrowseButton.Name = "MetadataBrowseButton";
-            this.MetadataBrowseButton.Size = new System.Drawing.Size(75, 23);
-            this.MetadataBrowseButton.TabIndex = 1;
-            this.MetadataBrowseButton.Text = "Browse";
-            this.MetadataBrowseButton.UseVisualStyleBackColor = true;
-            this.MetadataBrowseButton.Click += new System.EventHandler(this.MetadataBrowseButton_Click);
+            MetadataBrowseButton.Location = new Point(329, 21);
+            MetadataBrowseButton.Name = "MetadataBrowseButton";
+            MetadataBrowseButton.Size = new Size(75, 23);
+            MetadataBrowseButton.TabIndex = 1;
+            MetadataBrowseButton.Text = "Browse";
+            MetadataBrowseButton.UseVisualStyleBackColor = true;
+            MetadataBrowseButton.Click += MetadataBrowseButton_Click;
             // 
             // MetadataGroupBox
             // 
-            this.MetadataGroupBox.Controls.Add(this.MetadataPathBox);
-            this.MetadataGroupBox.Controls.Add(this.MetadataBrowseButton);
-            this.MetadataGroupBox.Location = new System.Drawing.Point(12, 12);
-            this.MetadataGroupBox.Name = "MetadataGroupBox";
-            this.MetadataGroupBox.Size = new System.Drawing.Size(413, 57);
-            this.MetadataGroupBox.TabIndex = 6;
-            this.MetadataGroupBox.TabStop = false;
-            this.MetadataGroupBox.Text = "Metadata files (*.json)";
+            MetadataGroupBox.Controls.Add(MetadataPathBox);
+            MetadataGroupBox.Controls.Add(MetadataBrowseButton);
+            MetadataGroupBox.Location = new Point(18, 12);
+            MetadataGroupBox.Name = "MetadataGroupBox";
+            MetadataGroupBox.Size = new Size(413, 57);
+            MetadataGroupBox.TabIndex = 6;
+            MetadataGroupBox.TabStop = false;
+            MetadataGroupBox.Text = "Файл с инструкциями (*.json)";
+            MetadataGroupBox.Enter += MetadataGroupBox_Enter;
             // 
             // TemplateGroupBox
             // 
-            this.TemplateGroupBox.Controls.Add(this.TemplatePathBox);
-            this.TemplateGroupBox.Controls.Add(this.TemplateBrowseButton);
-            this.TemplateGroupBox.Location = new System.Drawing.Point(12, 75);
-            this.TemplateGroupBox.Name = "TemplateGroupBox";
-            this.TemplateGroupBox.Size = new System.Drawing.Size(413, 52);
-            this.TemplateGroupBox.TabIndex = 7;
-            this.TemplateGroupBox.TabStop = false;
-            this.TemplateGroupBox.Text = "Template files (*.odt)";
+            TemplateGroupBox.Controls.Add(TemplatePathBox);
+            TemplateGroupBox.Controls.Add(TemplateBrowseButton);
+            TemplateGroupBox.Location = new Point(15, 75);
+            TemplateGroupBox.Name = "TemplateGroupBox";
+            TemplateGroupBox.Size = new Size(413, 63);
+            TemplateGroupBox.TabIndex = 7;
+            TemplateGroupBox.TabStop = false;
+            TemplateGroupBox.Text = "Документ для генерации (*.dotx)";
+            // 
+            // CsvGroupBox
+            // 
+            CsvGroupBox.Controls.Add(button1);
+            CsvGroupBox.Controls.Add(CsvPathBox);
+            CsvGroupBox.Location = new Point(18, 144);
+            CsvGroupBox.Name = "CsvGroupBox";
+            CsvGroupBox.Size = new Size(410, 55);
+            CsvGroupBox.TabIndex = 8;
+            CsvGroupBox.TabStop = false;
+            CsvGroupBox.Text = "Таблица с данными (*.csv)";
+            // 
+            // button1
+            // 
+            button1.Anchor = AnchorStyles.None;
+            button1.Location = new Point(329, 21);
+            button1.Name = "button1";
+            button1.Size = new Size(75, 23);
+            button1.TabIndex = 4;
+            button1.Text = "Browse";
+            button1.UseVisualStyleBackColor = true;
+            button1.Click += button1_Click;
+            // 
+            // CsvPathBox
+            // 
+            CsvPathBox.Anchor = AnchorStyles.None;
+            CsvPathBox.Location = new Point(6, 22);
+            CsvPathBox.Name = "CsvPathBox";
+            CsvPathBox.Size = new Size(320, 23);
+            CsvPathBox.TabIndex = 4;
             // 
             // OpenTemplate
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(437, 175);
-            this.Controls.Add(this.TemplateGroupBox);
-            this.Controls.Add(this.MetadataGroupBox);
-            this.Controls.Add(this.ButtonCancel);
-            this.Controls.Add(this.ButtonOk);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
-            this.Icon = global::Generator.Properties.Resources.Icon;
-            this.MaximizeBox = false;
-            this.MinimizeBox = false;
-            this.Name = "OpenTemplate";
-            this.Text = "Open";
-            this.Load += new System.EventHandler(this.OpenTemplate_Load);
-            this.MetadataGroupBox.ResumeLayout(false);
-            this.MetadataGroupBox.PerformLayout();
-            this.TemplateGroupBox.ResumeLayout(false);
-            this.TemplateGroupBox.PerformLayout();
-            this.ResumeLayout(false);
+            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleMode = AutoScaleMode.Font;
+            ClientSize = new Size(440, 238);
+            Controls.Add(CsvGroupBox);
+            Controls.Add(TemplateGroupBox);
+            Controls.Add(MetadataGroupBox);
+            Controls.Add(ButtonCancel);
+            Controls.Add(ButtonOk);
+            FormBorderStyle = FormBorderStyle.FixedDialog;
+            Icon = Properties.Resources.Icon;
+            MaximizeBox = false;
+            MinimizeBox = false;
+            Name = "OpenTemplate";
+            Text = "Open";
+            Load += OpenTemplate_Load;
+            MetadataGroupBox.ResumeLayout(false);
+            MetadataGroupBox.PerformLayout();
+            TemplateGroupBox.ResumeLayout(false);
+            TemplateGroupBox.PerformLayout();
+            CsvGroupBox.ResumeLayout(false);
+            CsvGroupBox.PerformLayout();
+            ResumeLayout(false);
 
         }
 
@@ -167,5 +205,8 @@
         private OpenFileDialog OpenDialog;
         private GroupBox MetadataGroupBox;
         private GroupBox TemplateGroupBox;
+        private GroupBox CsvGroupBox;
+        private Button button1;
+        private TextBox CsvPathBox;
     }
 }

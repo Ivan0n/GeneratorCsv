@@ -211,14 +211,10 @@ namespace Generator
             controls[currentIdx].Visible = true;
 
             ToolTipLabel.Text = DocumentProcessor.Fields[currentIdx].ToolTip;
-            try
+            if (ranges.ContainsKey(DocumentProcessor.Fields[currentIdx]))
             {
-                if (ranges.ContainsKey(DocumentProcessor.Fields[currentIdx]))
-                {
-                    ranges[DocumentProcessor.Fields[currentIdx]].First().select();
-                }
+                ranges[DocumentProcessor.Fields[currentIdx]].First().select();
             }
-            catch { }
 
         }
         private void MainForm_FormClosed(object sender, FormClosedEventArgs e)
@@ -296,7 +292,7 @@ namespace Generator
         private void MainForm_Load(object sender, EventArgs e)
         {
             string metadataFile = Directory.GetFiles(DocumentProcessor.FilesDir, "*.json").Where(x => !x.Split(Path.DirectorySeparatorChar).Last().StartsWith("Generator")).FirstOrDefault(string.Empty);
-            string templateFile = Directory.GetFiles(DocumentProcessor.FilesDir, "*.odt").FirstOrDefault(string.Empty);
+            string templateFile = Directory.GetFiles(DocumentProcessor.FilesDir, "*.dotx").FirstOrDefault(string.Empty);
 
             if (File.Exists(metadataFile) && File.Exists(templateFile))
             {

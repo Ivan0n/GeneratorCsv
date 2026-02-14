@@ -6,7 +6,7 @@ namespace Generator
 {
     public partial class OpenTemplate : Form
     {
-        private bool templateSet, metadataSet;
+        private bool templateSet, metadataSet, csvdataSet;
         public OpenTemplate()
         {
             InitializeComponent();
@@ -15,10 +15,10 @@ namespace Generator
         }
         public void OpenTemplate_Load(object sender, EventArgs e)
         {
-            string templateFile, metadataFile;
+            string templateFile, metadataFile, csvdataFile;
             if (DocumentProcessor.CurrentTemplateFile == string.Empty)
             {
-                templateFile = Directory.GetFiles(DocumentProcessor.FilesDir, "*.odt").FirstOrDefault(string.Empty);
+                templateFile = Directory.GetFiles(DocumentProcessor.FilesDir, "*.dotx").FirstOrDefault(string.Empty);
             }
             else
             {
@@ -31,6 +31,10 @@ namespace Generator
             else
             {
                 metadataFile = DocumentProcessor.CurrentMetadataFile;
+            }
+            if (DocumentProcessor.CurrentTemplateFile == string.Empty)
+            {
+                csvdataFile = Directory.GetFiles(DocumentProcessor.FilesDir, "*csv").FirstOrDefault(string.Empty);
             }
             MetadataPathBox.Text = metadataFile;
             metadataSet = File.Exists(metadataFile);
@@ -93,13 +97,20 @@ namespace Generator
         }
         private void TemplateBrowseButton_Click(object sender, EventArgs e)
         {
-            OpenDialog.Filter = "Template files (*.odt)|*.odt|All Files (*.*)|*.*";
+            OpenDialog.Filter = "Template files (*.dotx)|*.dotx|All Files (*.*)|*.*";
             if (OpenDialog.ShowDialog() == DialogResult.OK)
             {
                 TemplatePathBox.Text = OpenDialog.FileName;
             }
         }
-
+        private void button1_Click(object sender, EventArgs e)
+        {
+            OpenDialog.Filter = "Template files (*.csv)|*.csv|All Files (*.*)|*.*";
+            if (OpenDialog.ShowDialog() == DialogResult.OK)
+            {
+                CsvPathBox.Text = OpenDialog.FileName;
+            }
+        }
         void ButtonOk_Click(object sender, EventArgs e)
         {
             Close();
@@ -109,5 +120,32 @@ namespace Generator
         {
             Close();
         }
+
+        private void MetadataGroupBox_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void groupBox1_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox1_TextChanged_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void groupBox1_Enter_1(object sender, EventArgs e)
+        {
+
+        }
+
+
     }
 }

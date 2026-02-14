@@ -28,253 +28,275 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.MainSplit = new System.Windows.Forms.SplitContainer();
-            this.MenuStrip = new System.Windows.Forms.MenuStrip();
-            this.FileTSMI = new System.Windows.Forms.ToolStripMenuItem();
-            this.OpenTSMI = new System.Windows.Forms.ToolStripMenuItem();
-            this.SaveTSMI = new System.Windows.Forms.ToolStripMenuItem();
-            this.SaveAsTSMI = new System.Windows.Forms.ToolStripMenuItem();
-            this.QuitTSMI = new System.Windows.Forms.ToolStripMenuItem();
-            this.HelpTSMI = new System.Windows.Forms.ToolStripMenuItem();
-            this.InputTreeSplit = new System.Windows.Forms.SplitContainer();
-            this.ToolTipSplit = new System.Windows.Forms.SplitContainer();
-            this.ToolTipLabel = new System.Windows.Forms.Label();
-            this.TreeBrowserSplit = new System.Windows.Forms.SplitContainer();
-            this.Fields = new System.Windows.Forms.TreeView();
-            this.Preview = new System.Windows.Forms.WebBrowser();
-            this.SaveFileDialog = new System.Windows.Forms.SaveFileDialog();
-            ((System.ComponentModel.ISupportInitialize)(this.MainSplit)).BeginInit();
-            this.MainSplit.Panel1.SuspendLayout();
-            this.MainSplit.Panel2.SuspendLayout();
-            this.MainSplit.SuspendLayout();
-            this.MenuStrip.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.InputTreeSplit)).BeginInit();
-            this.InputTreeSplit.Panel1.SuspendLayout();
-            this.InputTreeSplit.Panel2.SuspendLayout();
-            this.InputTreeSplit.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.ToolTipSplit)).BeginInit();
-            this.ToolTipSplit.Panel2.SuspendLayout();
-            this.ToolTipSplit.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.TreeBrowserSplit)).BeginInit();
-            this.TreeBrowserSplit.Panel1.SuspendLayout();
-            this.TreeBrowserSplit.Panel2.SuspendLayout();
-            this.TreeBrowserSplit.SuspendLayout();
-            this.SuspendLayout();
+            MainSplit = new SplitContainer();
+            MenuStrip = new MenuStrip();
+            FileTSMI = new ToolStripMenuItem();
+            OpenTSMI = new ToolStripMenuItem();
+            SaveTSMI = new ToolStripMenuItem();
+            SaveAsTSMI = new ToolStripMenuItem();
+            QuitTSMI = new ToolStripMenuItem();
+            HelpTSMI = new ToolStripMenuItem();
+            thereIsNoHelpToolStripMenuItem = new ToolStripMenuItem();
+            noOneWillHearYourCryToolStripMenuItem = new ToolStripMenuItem();
+            theSufferingWillBeEternalToolStripMenuItem = new ToolStripMenuItem();
+            enjoyToolStripMenuItem = new ToolStripMenuItem();
+            InputTreeSplit = new SplitContainer();
+            ToolTipSplit = new SplitContainer();
+            ToolTipLabel = new Label();
+            TreeBrowserSplit = new SplitContainer();
+            Fields = new TreeView();
+            Preview = new WebBrowser();
+            SaveFileDialog = new SaveFileDialog();
+            ((System.ComponentModel.ISupportInitialize)MainSplit).BeginInit();
+            MainSplit.Panel1.SuspendLayout();
+            MainSplit.Panel2.SuspendLayout();
+            MainSplit.SuspendLayout();
+            MenuStrip.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)InputTreeSplit).BeginInit();
+            InputTreeSplit.Panel1.SuspendLayout();
+            InputTreeSplit.Panel2.SuspendLayout();
+            InputTreeSplit.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)ToolTipSplit).BeginInit();
+            ToolTipSplit.Panel2.SuspendLayout();
+            ToolTipSplit.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)TreeBrowserSplit).BeginInit();
+            TreeBrowserSplit.Panel1.SuspendLayout();
+            TreeBrowserSplit.Panel2.SuspendLayout();
+            TreeBrowserSplit.SuspendLayout();
+            SuspendLayout();
             // 
             // MainSplit
             // 
-            this.MainSplit.BackColor = System.Drawing.SystemColors.Control;
-            this.MainSplit.Cursor = System.Windows.Forms.Cursors.HSplit;
-            this.MainSplit.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.MainSplit.FixedPanel = System.Windows.Forms.FixedPanel.Panel1;
-            this.MainSplit.IsSplitterFixed = true;
-            this.MainSplit.Location = new System.Drawing.Point(0, 0);
-            this.MainSplit.Name = "MainSplit";
-            this.MainSplit.Orientation = System.Windows.Forms.Orientation.Horizontal;
+            MainSplit.BackColor = SystemColors.Control;
+            MainSplit.Cursor = Cursors.HSplit;
+            MainSplit.Dock = DockStyle.Fill;
+            MainSplit.FixedPanel = FixedPanel.Panel1;
+            MainSplit.IsSplitterFixed = true;
+            MainSplit.Location = new Point(0, 0);
+            MainSplit.Name = "MainSplit";
+            MainSplit.Orientation = Orientation.Horizontal;
             // 
             // MainSplit.Panel1
             // 
-            this.MainSplit.Panel1.Controls.Add(this.MenuStrip);
+            MainSplit.Panel1.Controls.Add(MenuStrip);
             // 
             // MainSplit.Panel2
             // 
-            this.MainSplit.Panel2.Controls.Add(this.InputTreeSplit);
-            this.MainSplit.Size = new System.Drawing.Size(985, 489);
-            this.MainSplit.SplitterDistance = 25;
-            this.MainSplit.TabIndex = 1;
+            MainSplit.Panel2.Controls.Add(InputTreeSplit);
+            MainSplit.Size = new Size(1666, 758);
+            MainSplit.SplitterDistance = 25;
+            MainSplit.TabIndex = 1;
             // 
             // MenuStrip
             // 
-            this.MenuStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.FileTSMI,
-            this.HelpTSMI});
-            this.MenuStrip.Location = new System.Drawing.Point(0, 0);
-            this.MenuStrip.Name = "MenuStrip";
-            this.MenuStrip.Size = new System.Drawing.Size(985, 24);
-            this.MenuStrip.TabIndex = 0;
-            this.MenuStrip.Text = "menuStrip1";
+            MenuStrip.Items.AddRange(new ToolStripItem[] { FileTSMI, HelpTSMI });
+            MenuStrip.Location = new Point(0, 0);
+            MenuStrip.Name = "MenuStrip";
+            MenuStrip.Size = new Size(1666, 24);
+            MenuStrip.TabIndex = 0;
+            MenuStrip.Text = "menuStrip1";
             // 
             // FileTSMI
             // 
-            this.FileTSMI.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.OpenTSMI,
-            this.SaveTSMI,
-            this.SaveAsTSMI,
-            this.QuitTSMI});
-            this.FileTSMI.Name = "FileTSMI";
-            this.FileTSMI.Size = new System.Drawing.Size(37, 20);
-            this.FileTSMI.Text = "File";
+            FileTSMI.DropDownItems.AddRange(new ToolStripItem[] { OpenTSMI, SaveTSMI, SaveAsTSMI, QuitTSMI });
+            FileTSMI.Name = "FileTSMI";
+            FileTSMI.Size = new Size(37, 20);
+            FileTSMI.Text = "File";
             // 
             // OpenTSMI
             // 
-            this.OpenTSMI.Name = "OpenTSMI";
-            this.OpenTSMI.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.O)));
-            this.OpenTSMI.Size = new System.Drawing.Size(190, 22);
-            this.OpenTSMI.Text = "Оpen";
-            this.OpenTSMI.Click += new System.EventHandler(this.OpenTSMI_Click);
+            OpenTSMI.Name = "OpenTSMI";
+            OpenTSMI.ShortcutKeys = Keys.Control | Keys.O;
+            OpenTSMI.Size = new Size(190, 22);
+            OpenTSMI.Text = "Оpen";
+            OpenTSMI.Click += OpenTSMI_Click;
             // 
             // SaveTSMI
             // 
-            this.SaveTSMI.Name = "SaveTSMI";
-            this.SaveTSMI.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.S)));
-            this.SaveTSMI.Size = new System.Drawing.Size(190, 22);
-            this.SaveTSMI.Text = "Save";
-            this.SaveTSMI.Click += new System.EventHandler(this.SaveTSMI_Click);
+            SaveTSMI.Name = "SaveTSMI";
+            SaveTSMI.ShortcutKeys = Keys.Control | Keys.S;
+            SaveTSMI.Size = new Size(190, 22);
+            SaveTSMI.Text = "Save";
+            SaveTSMI.Click += SaveTSMI_Click;
             // 
             // SaveAsTSMI
             // 
-            this.SaveAsTSMI.Name = "SaveAsTSMI";
-            this.SaveAsTSMI.ShortcutKeys = ((System.Windows.Forms.Keys)(((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Shift) 
-            | System.Windows.Forms.Keys.S)));
-            this.SaveAsTSMI.Size = new System.Drawing.Size(190, 22);
-            this.SaveAsTSMI.Text = "Save as";
-            this.SaveAsTSMI.Click += new System.EventHandler(this.SaveAsTSMI_Click);
+            SaveAsTSMI.Name = "SaveAsTSMI";
+            SaveAsTSMI.ShortcutKeys = Keys.Control | Keys.Shift | Keys.S;
+            SaveAsTSMI.Size = new Size(190, 22);
+            SaveAsTSMI.Text = "Save as";
+            SaveAsTSMI.Click += SaveAsTSMI_Click;
             // 
             // QuitTSMI
             // 
-            this.QuitTSMI.Name = "QuitTSMI";
-            this.QuitTSMI.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Alt | System.Windows.Forms.Keys.F4)));
-            this.QuitTSMI.ShowShortcutKeys = false;
-            this.QuitTSMI.Size = new System.Drawing.Size(190, 22);
-            this.QuitTSMI.Text = "Quit";
-            this.QuitTSMI.Click += new System.EventHandler(this.QuitTSMI_Click);
+            QuitTSMI.Name = "QuitTSMI";
+            QuitTSMI.ShortcutKeys = Keys.Alt | Keys.F4;
+            QuitTSMI.ShowShortcutKeys = false;
+            QuitTSMI.Size = new Size(190, 22);
+            QuitTSMI.Text = "Quit";
+            QuitTSMI.Click += QuitTSMI_Click;
             // 
             // HelpTSMI
-            //
-            this.HelpTSMI.Name = "HelpTSMI";
-            this.HelpTSMI.Size = new System.Drawing.Size(44, 20);
-            this.HelpTSMI.Text = "Help";
+            // 
+            HelpTSMI.DropDownItems.AddRange(new ToolStripItem[] { thereIsNoHelpToolStripMenuItem, noOneWillHearYourCryToolStripMenuItem, theSufferingWillBeEternalToolStripMenuItem, enjoyToolStripMenuItem });
+            HelpTSMI.Name = "HelpTSMI";
+            HelpTSMI.Size = new Size(44, 20);
+            HelpTSMI.Text = "Help";
+            // 
+            // thereIsNoHelpToolStripMenuItem
+            // 
+            thereIsNoHelpToolStripMenuItem.Name = "thereIsNoHelpToolStripMenuItem";
+            thereIsNoHelpToolStripMenuItem.Size = new Size(219, 22);
+            thereIsNoHelpToolStripMenuItem.Text = "There is no help";
+            // 
+            // noOneWillHearYourCryToolStripMenuItem
+            // 
+            noOneWillHearYourCryToolStripMenuItem.Name = "noOneWillHearYourCryToolStripMenuItem";
+            noOneWillHearYourCryToolStripMenuItem.Size = new Size(219, 22);
+            noOneWillHearYourCryToolStripMenuItem.Text = "No one will hear your cry";
+            // 
+            // theSufferingWillBeEternalToolStripMenuItem
+            // 
+            theSufferingWillBeEternalToolStripMenuItem.Name = "theSufferingWillBeEternalToolStripMenuItem";
+            theSufferingWillBeEternalToolStripMenuItem.Size = new Size(219, 22);
+            theSufferingWillBeEternalToolStripMenuItem.Text = "The suffering will be eternal";
+            // 
+            // enjoyToolStripMenuItem
+            // 
+            enjoyToolStripMenuItem.Name = "enjoyToolStripMenuItem";
+            enjoyToolStripMenuItem.Size = new Size(219, 22);
+            enjoyToolStripMenuItem.Text = "Enjoy)";
             // 
             // InputTreeSplit
             // 
-            this.InputTreeSplit.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.InputTreeSplit.Cursor = System.Windows.Forms.Cursors.VSplit;
-            this.InputTreeSplit.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.InputTreeSplit.Location = new System.Drawing.Point(0, 0);
-            this.InputTreeSplit.Name = "InputTreeSplit";
+            InputTreeSplit.BorderStyle = BorderStyle.Fixed3D;
+            InputTreeSplit.Cursor = Cursors.VSplit;
+            InputTreeSplit.Dock = DockStyle.Fill;
+            InputTreeSplit.Location = new Point(0, 0);
+            InputTreeSplit.Name = "InputTreeSplit";
             // 
             // InputTreeSplit.Panel1
             // 
-            this.InputTreeSplit.Panel1.Controls.Add(this.ToolTipSplit);
-            this.InputTreeSplit.Panel1.Cursor = System.Windows.Forms.Cursors.Default;
+            InputTreeSplit.Panel1.Controls.Add(ToolTipSplit);
+            InputTreeSplit.Panel1.Cursor = Cursors.Default;
             // 
             // InputTreeSplit.Panel2
             // 
-            this.InputTreeSplit.Panel2.Controls.Add(this.TreeBrowserSplit);
-            this.InputTreeSplit.Size = new System.Drawing.Size(985, 460);
-            this.InputTreeSplit.SplitterDistance = 360;
-            this.InputTreeSplit.TabIndex = 0;
+            InputTreeSplit.Panel2.Controls.Add(TreeBrowserSplit);
+            InputTreeSplit.Size = new Size(1666, 729);
+            InputTreeSplit.SplitterDistance = 608;
+            InputTreeSplit.TabIndex = 0;
             // 
             // ToolTipSplit
             // 
-            this.ToolTipSplit.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.ToolTipSplit.Cursor = System.Windows.Forms.Cursors.HSplit;
-            this.ToolTipSplit.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.ToolTipSplit.Location = new System.Drawing.Point(0, 0);
-            this.ToolTipSplit.Name = "ToolTipSplit";
-            this.ToolTipSplit.Orientation = System.Windows.Forms.Orientation.Horizontal;
+            ToolTipSplit.BorderStyle = BorderStyle.Fixed3D;
+            ToolTipSplit.Cursor = Cursors.HSplit;
+            ToolTipSplit.Dock = DockStyle.Fill;
+            ToolTipSplit.Location = new Point(0, 0);
+            ToolTipSplit.Name = "ToolTipSplit";
+            ToolTipSplit.Orientation = Orientation.Horizontal;
             // 
             // ToolTipSplit.Panel1
             // 
-            this.ToolTipSplit.Panel1.Cursor = System.Windows.Forms.Cursors.Default;
+            ToolTipSplit.Panel1.Cursor = Cursors.Default;
             // 
             // ToolTipSplit.Panel2
             // 
-            this.ToolTipSplit.Panel2.Controls.Add(this.ToolTipLabel);
-            this.ToolTipSplit.Panel2.Cursor = System.Windows.Forms.Cursors.Default;
-            this.ToolTipSplit.Size = new System.Drawing.Size(360, 460);
-            this.ToolTipSplit.SplitterDistance = 315;
-            this.ToolTipSplit.TabIndex = 0;
+            ToolTipSplit.Panel2.Controls.Add(ToolTipLabel);
+            ToolTipSplit.Panel2.Cursor = Cursors.Default;
+            ToolTipSplit.Size = new Size(608, 729);
+            ToolTipSplit.SplitterDistance = 499;
+            ToolTipSplit.TabIndex = 0;
             // 
             // ToolTipLabel
             // 
-            this.ToolTipLabel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.ToolTipLabel.Location = new System.Drawing.Point(0, 0);
-            this.ToolTipLabel.Name = "ToolTipLabel";
-            this.ToolTipLabel.Size = new System.Drawing.Size(356, 137);
-            this.ToolTipLabel.TabIndex = 0;
-            this.ToolTipLabel.Text = "ToolTip";
-            this.ToolTipLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            ToolTipLabel.Dock = DockStyle.Fill;
+            ToolTipLabel.Location = new Point(0, 0);
+            ToolTipLabel.Name = "ToolTipLabel";
+            ToolTipLabel.Size = new Size(604, 222);
+            ToolTipLabel.TabIndex = 0;
+            ToolTipLabel.Text = "ToolTip";
+            ToolTipLabel.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // TreeBrowserSplit
             // 
-            this.TreeBrowserSplit.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.TreeBrowserSplit.Cursor = System.Windows.Forms.Cursors.VSplit;
-            this.TreeBrowserSplit.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.TreeBrowserSplit.Location = new System.Drawing.Point(0, 0);
-            this.TreeBrowserSplit.Name = "TreeBrowserSplit";
+            TreeBrowserSplit.BorderStyle = BorderStyle.Fixed3D;
+            TreeBrowserSplit.Cursor = Cursors.VSplit;
+            TreeBrowserSplit.Dock = DockStyle.Fill;
+            TreeBrowserSplit.Location = new Point(0, 0);
+            TreeBrowserSplit.Name = "TreeBrowserSplit";
             // 
             // TreeBrowserSplit.Panel1
             // 
-            this.TreeBrowserSplit.Panel1.Controls.Add(this.Fields);
-            this.TreeBrowserSplit.Panel1.Cursor = System.Windows.Forms.Cursors.Default;
+            TreeBrowserSplit.Panel1.Controls.Add(Fields);
+            TreeBrowserSplit.Panel1.Cursor = Cursors.Default;
             // 
             // TreeBrowserSplit.Panel2
             // 
-            this.TreeBrowserSplit.Panel2.Controls.Add(this.Preview);
-            this.TreeBrowserSplit.Panel2.Cursor = System.Windows.Forms.Cursors.Default;
-            this.TreeBrowserSplit.Size = new System.Drawing.Size(621, 460);
-            this.TreeBrowserSplit.SplitterDistance = 216;
-            this.TreeBrowserSplit.TabIndex = 0;
+            TreeBrowserSplit.Panel2.Controls.Add(Preview);
+            TreeBrowserSplit.Panel2.Cursor = Cursors.Default;
+            TreeBrowserSplit.Size = new Size(1054, 729);
+            TreeBrowserSplit.SplitterDistance = 366;
+            TreeBrowserSplit.TabIndex = 0;
             // 
             // Fields
             // 
-            this.Fields.BackColor = System.Drawing.SystemColors.Control;
-            this.Fields.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.Fields.HideSelection = false;
-            this.Fields.Location = new System.Drawing.Point(0, 0);
-            this.Fields.Name = "Fields";
-            this.Fields.Size = new System.Drawing.Size(212, 456);
-            this.Fields.TabIndex = 1;
-            this.Fields.AfterSelect += new System.Windows.Forms.TreeViewEventHandler(this.TreeView_AfterSelect);
+            Fields.BackColor = SystemColors.Control;
+            Fields.Dock = DockStyle.Fill;
+            Fields.HideSelection = false;
+            Fields.Location = new Point(0, 0);
+            Fields.Name = "Fields";
+            Fields.Size = new Size(362, 725);
+            Fields.TabIndex = 1;
+            Fields.AfterSelect += TreeView_AfterSelect;
             // 
             // Preview
             // 
-            this.Preview.AllowWebBrowserDrop = false;
-            this.Preview.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.Preview.IsWebBrowserContextMenuEnabled = false;
-            this.Preview.Location = new System.Drawing.Point(0, 0);
-            this.Preview.Name = "Preview";
-            this.Preview.Size = new System.Drawing.Size(397, 456);
-            this.Preview.TabIndex = 2;
-            this.Preview.DocumentCompleted += new System.Windows.Forms.WebBrowserDocumentCompletedEventHandler(this.Preview_DocumentCompleted);
+            Preview.AllowWebBrowserDrop = false;
+            Preview.Dock = DockStyle.Fill;
+            Preview.IsWebBrowserContextMenuEnabled = false;
+            Preview.Location = new Point(0, 0);
+            Preview.Name = "Preview";
+            Preview.Size = new Size(680, 725);
+            Preview.TabIndex = 2;
+            Preview.DocumentCompleted += Preview_DocumentCompleted;
             // 
             // SaveFileDialog
             // 
-            this.SaveFileDialog.Filter = "OpenDocument Text files (*.odt)|*.odt|All files (*.*)|*.*";
+            SaveFileDialog.Filter = "Word document files (*.docx)|*.docx|All files (*.*)|*.*";
             // 
             // MainForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(985, 489);
-            this.Controls.Add(this.MainSplit);
-            this.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.Icon = global::Generator.Properties.Resources.Icon;
-            this.MainMenuStrip = this.MenuStrip;
-            this.Name = "MainForm";
-            this.Text = "Generator";
-            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.MainForm_FormClosed);
-            this.Load += new System.EventHandler(this.MainForm_Load);
-            this.MainSplit.Panel1.ResumeLayout(false);
-            this.MainSplit.Panel1.PerformLayout();
-            this.MainSplit.Panel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.MainSplit)).EndInit();
-            this.MainSplit.ResumeLayout(false);
-            this.MenuStrip.ResumeLayout(false);
-            this.MenuStrip.PerformLayout();
-            this.InputTreeSplit.Panel1.ResumeLayout(false);
-            this.InputTreeSplit.Panel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.InputTreeSplit)).EndInit();
-            this.InputTreeSplit.ResumeLayout(false);
-            this.ToolTipSplit.Panel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.ToolTipSplit)).EndInit();
-            this.ToolTipSplit.ResumeLayout(false);
-            this.TreeBrowserSplit.Panel1.ResumeLayout(false);
-            this.TreeBrowserSplit.Panel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.TreeBrowserSplit)).EndInit();
-            this.TreeBrowserSplit.ResumeLayout(false);
-            this.ResumeLayout(false);
+            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleMode = AutoScaleMode.Font;
+            ClientSize = new Size(1666, 758);
+            Controls.Add(MainSplit);
+            Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            Icon = Properties.Resources.Icon;
+            MainMenuStrip = MenuStrip;
+            Name = "MainForm";
+            Text = "Generator";
+            FormClosed += MainForm_FormClosed;
+            Load += MainForm_Load;
+            MainSplit.Panel1.ResumeLayout(false);
+            MainSplit.Panel1.PerformLayout();
+            MainSplit.Panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)MainSplit).EndInit();
+            MainSplit.ResumeLayout(false);
+            MenuStrip.ResumeLayout(false);
+            MenuStrip.PerformLayout();
+            InputTreeSplit.Panel1.ResumeLayout(false);
+            InputTreeSplit.Panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)InputTreeSplit).EndInit();
+            InputTreeSplit.ResumeLayout(false);
+            ToolTipSplit.Panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)ToolTipSplit).EndInit();
+            ToolTipSplit.ResumeLayout(false);
+            TreeBrowserSplit.Panel1.ResumeLayout(false);
+            TreeBrowserSplit.Panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)TreeBrowserSplit).EndInit();
+            TreeBrowserSplit.ResumeLayout(false);
+            ResumeLayout(false);
 
         }
 
@@ -294,6 +316,10 @@
         private SaveFileDialog SaveFileDialog;
         private SplitContainer ToolTipSplit;
         private Label ToolTipLabel;
+        private ToolStripMenuItem thereIsNoHelpToolStripMenuItem;
+        private ToolStripMenuItem noOneWillHearYourCryToolStripMenuItem;
+        private ToolStripMenuItem theSufferingWillBeEternalToolStripMenuItem;
+        private ToolStripMenuItem enjoyToolStripMenuItem;
     }
 }
 
